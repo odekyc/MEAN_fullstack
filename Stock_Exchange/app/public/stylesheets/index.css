@@ -12,7 +12,8 @@ body {
 	margin: 0 auto;
 	background-color: white;
 	position: relative;
-	top: 65px;
+	top: -22px;
+	
 }
 
 #stock-exp-title{
@@ -24,6 +25,15 @@ body {
 hr{
    position: relative;
    top: -40px;
+   color: blue;
+}
+
+#stock-exp-descript{
+	font-size: 2em;
+	font-weight: bold;
+	position: relative;
+	left: 420px;
+	top: -50px;
 }
 
 a {

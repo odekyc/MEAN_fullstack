@@ -37,7 +37,7 @@ hr{
 }
 
 #lock-icon{
-	font-size: 2em;
+	font-size: 1em;
 }
 
 a {
@@ -45,11 +45,22 @@ a {
 }
 
 form{
-	font-size: 2.3em;
+	font-size: 2em;
 	font-weight: bolder;
 	color: green;
 	margin: 0 auto;
 	position: relative;
 	text-align: center;
-	top: 80px;
+	top: 40px;
+}
+
+input{
+	height: 37px;
+	width: 300px;
+	position: relative;
+	top: -5px;
+}
+
+form span{
+	line-height: 1.8em;
 }

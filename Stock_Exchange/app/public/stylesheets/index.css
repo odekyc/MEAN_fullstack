@@ -12,7 +12,7 @@ body {
 	margin: 0 auto;
 	background-color: white;
 	position: relative;
-	top: -46px;
+	top: -30px;
 	
 }
 
@@ -40,8 +40,10 @@ hr{
 	font-size: 1em;
 }
 
-a {
-  color: #ffffcc;
+a{
+  font-size: 0.4em;
+  position: relative;
+
 }
 
 form{
@@ -58,9 +60,34 @@ input{
 	height: 37px;
 	width: 300px;
 	position: relative;
-	top: -5px;
+	top: 5px;
+	margin: 0 auto;
 }
 
 form span{
-	line-height: 1.8em;
+	line-height: 1.4em;
 }
+
+select{
+	height: 27px;
+	width: 180px;
+	text-align: center;
+	font-weight: bold;
+}
+
+option{
+	text-align: center;
+	font-weight: bold;
+}
+
+#submit{
+	background-color: blue;
+	color: white;
+	font-size: 0.7em;
+	width: 120px;
+	height: 42px;
+	position: relative;
+	top: 30px;
+}
+
+

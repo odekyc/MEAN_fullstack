@@ -34,13 +34,22 @@
 <div id="log-in-div">
    <form action="homepage.html">
 	  <span>Account Number:<span><br>
-
-	  <input type="number" name="accountnum" value="">
-	  <br>
+	  <input type="number" name="accountnum" value=""><br>
+	  <a href="forgetaccountnum.html">Forget Account Number?</a><br>
 	  <span><span id="lock-icon">&#128274;</span>&nbsp;Password:</span><br>
 	  <input type="password" name="password" value="">
 	  <br>
-	  <input type="submit" value="Submit">
+	  <a href="forgetpassword.html">Forget Password?</a>
+	  <br>
+	  <span>Language:<span>
+	  <br>
+	  <select name="language">
+		  <option value="en">English</option>
+		  <option value="ch-simplified">简体中文</option>
+		  <option value="ch-traditional">繁體中文</option>
+	  </select>
+	  <br>
+	  <input id="submit" type="submit" value="Submit">
   </form>
    
   </div>

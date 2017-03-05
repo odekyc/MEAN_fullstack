@@ -43,3 +43,13 @@ hr{
 a {
   color: #ffffcc;
 }
+
+form{
+	font-size: 2.3em;
+	font-weight: bolder;
+	color: green;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	top: 80px;
+}

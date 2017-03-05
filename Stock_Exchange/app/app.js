@@ -3,15 +3,35 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+var session=require('express-session');
+var redisStore=require('connect-redis')(session);
 var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var app = express();
 var debug = require('debug')('my-application');
+var redis = require('redis');
+var csrf=require('csurf');
+var client = redis.createClient({host : 'localhost', port : 6379});
+
+client.on('ready',function() {
+ console.log("Redis is ready");
+});
+
+client.on('error',function() {
+ console.log("Error in Redis");
+});
+
 
 app.set('port', process.env.PORT || 8080);
 app.use(express.static(__dirname + '/public'));
-
+app.use(session({
+    secret: 'jfjgfhjhgjfgjhfghjfghj',
+    // create new redis store.
+    store: new redisStore({ host: 'localhost', port: 6379, client: client,ttl :  260}),
+    saveUninitialized: false,
+    resave: false
+}));
 
 // view engine setup
 // app.set('views', path.join(__dirname, 'views'));
@@ -23,10 +43,16 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/users', users);
+
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(csrf());
+
+app.use(function (request, response, next) {   response.locals.csrftoken = request.csrfToken();   next(); });
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -44,6 +70,20 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+
+app.use('/', index);
+app.get('/', function(req, res){
+    console.log('Session ID:', req.sessionID);
+
+    if(req.session.counter){
+      req.session.counter=req.session.counter+1;
+    }
+    else{
+      req.session.counter=1;
+    }
+    res.send('Counter: '+req.session.counter);
 });
 
 var server = app.listen(app.get('port'), function() {

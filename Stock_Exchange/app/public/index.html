@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
 <title>Stock Express</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
@@ -13,6 +13,7 @@
 </audio>
 </head>
 <body>
+<script src="./javascripts/index.js"></script>
 <audio id="AI_move" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/734159/AI_move.wav" type="audio/wav">
 </audio>
   <audio id="Who_won" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/734159/Won_anime.wav" type="audio/wav">
@@ -28,12 +29,11 @@
 <audio id="XorO" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/734159/click-sound.wav" type="audio/wav">
 </audio>
   
-<!-- <script src="tic_tac_toe.js"></script> -->
 <p id="stock-exp-title" class="English">Stock Express</p>
 <hr>
 <p id="stock-exp-descript" class="English">A Stock Exchange Emulator That Let You Learn the Trade
 <div id="log-in-div" ng-app="myApp">
-   <form action="homepage.html">
+   <form action="index.html">
    <input type="hidden" name="_csrf" value="fjslkldflsjflksdjjflskdj">
 	  <span>Account Number:<span><br>
 	  <input type="text" name="accountnum" value="" minlength="9" maxlength="9" required><br>
@@ -45,15 +45,18 @@
 	  <br>
 	  <span>Language:<span>
 	  <br>
-	  <select name="language">
-		  <option value="en">English</option>
-		  <option value="ch-simplified">简体中文</option>
-		  <option value="ch-traditional">繁體中文</option>
+	  <select id="lang" name="language">
+		  <option id="en" value="en">English</option>
+		  <option id="ch-simplified" value="ch-simplified">简体中文</option>
+		  <option id="ch-traditional" value="ch-traditional">繁體中文</option>
 	  </select>
 	  <br>
 	  <input id="submit" type="submit" value="Submit">
   </form>
-   
+
   </div>
+
+
+
 </body>
 </html>

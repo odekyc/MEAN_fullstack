@@ -92,6 +92,19 @@ app.get('/', function(req, res){
     res.send('Counter: '+req.session.counter);
 });
 
+app.post('/', function(request, response){   
+  request.assert('accountnum', 'Account Number is required').notEmpty();   
+  request.assert('password', 'Password is required').notEmpty();  
+    var errors = request.validationErrors();   
+  if (errors)     
+    response.render('index', {errors: errors});   
+  else     response.render('index.html', {email: request.password}); 
+
+});
+
+
+
+
 var server = app.listen(app.get('port'), function() {
   debug('Express server listening on port ' + server.address().port);
 });

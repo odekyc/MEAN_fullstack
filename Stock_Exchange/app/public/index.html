@@ -3,6 +3,7 @@
 <title>Stock Express</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
 </link>
 
@@ -31,14 +32,14 @@
 <p id="stock-exp-title" class="English">Stock Express</p>
 <hr>
 <p id="stock-exp-descript" class="English">A Stock Exchange Emulator That Let You Learn the Trade
-<div id="log-in-div">
+<div id="log-in-div" ng-app="myApp">
    <form action="homepage.html">
    <input type="hidden" name="_csrf" value="fjslkldflsjflksdjjflskdj">
 	  <span>Account Number:<span><br>
-	  <input type="number" name="accountnum" value=""><br>
+	  <input type="text" name="accountnum" value="" minlength="9" maxlength="9" required><br>
 	  <a href="forgetaccountnum.html">Forget Account Number?</a><br>
 	  <span><span id="lock-icon">&#128274;</span>&nbsp;Password:</span><br>
-	  <input type="password" name="password" value="">
+	  <input type="password" name="password" value="" minlength="14" maxlength="18" required>
 	  <br>
 	  <a href="forgetpassword.html">Forget Password?</a>
 	  <br>

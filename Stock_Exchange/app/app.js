@@ -12,7 +12,9 @@ var app = express();
 var debug = require('debug')('my-application');
 var redis = require('redis');
 var csrf=require('csurf');
+var helmet = require('helmet');
 var client = redis.createClient({host : 'localhost', port : 6379});
+var  validator = require('express-validator');
 
 client.on('ready',function() {
  console.log("Redis is ready");
@@ -41,13 +43,17 @@ app.use(session({
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(csrf());
+app.use(helmet());
+app.use(validator());
+
+
 
 app.use(function (request, response, next) {   response.locals.csrftoken = request.csrfToken();   next(); });
 

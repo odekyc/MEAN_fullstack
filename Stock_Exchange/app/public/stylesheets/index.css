@@ -12,7 +12,7 @@ body {
 	margin: 0 auto;
 	background-color: white;
 	position: relative;
-	top: -30px;
+	top: -95px;
 	
 }
 
@@ -49,12 +49,29 @@ body {
 	font-weight: bold;
 	color: orange;
 	position: relative;
-	top: 115px;
+	top: 20px;
+}
+
+#stock-exp-title-ch-sim{
+    font-size: 4em;
+	font-weight: bold;
+	color: orange;
+	position: relative;
+	top: -100px;
+	left: 210px;
+}
+
+#stock-exp-descript-ch-sim{
+	font-size: 2em;
+	font-weight: bold;
+	position: relative;
+	left: 560px;
+	top: -200px;
 }
 
 hr{
    position: relative;
-   top: -40px;
+   top: -140px;
    color: blue;
 }
 
@@ -63,7 +80,7 @@ hr{
 	font-weight: bold;
 	position: relative;
 	left: 520px;
-	top: -50px;
+	top: -140px;
 }
 
 #lock-icon{

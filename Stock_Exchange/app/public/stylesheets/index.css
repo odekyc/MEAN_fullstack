@@ -17,14 +17,11 @@ body {
 }
 
 .ch-simplified{
-	position: relative;
-	top: -38px;
 	visibility: hidden;
 }
 
 .ch-traditional{
-	position: relative;
-	top: -38px;
+	
 	visibility: hidden;
 }
 
@@ -60,7 +57,7 @@ body {
 	font-weight: bold;
 	color: orange;
 	position: relative;
-	top: 165px;
+	top: 25px;
 }
 
 #stock-exp-title-ch-sim{
@@ -69,17 +66,10 @@ body {
 	color: orange;
 	position: relative;
 	left: 210px;
-	top: 27px;
+	top: -100px;
 }
 
-#stock-exp-title-ch-tra{
-    font-size: 4em;
-	font-weight: bold;
-	color: orange;
-	position: relative;
-	top: -105px;
-	left: 210px;
-}
+
 
 #stock-exp-descript-ch-sim{
 	font-size: 2em;
@@ -89,13 +79,6 @@ body {
 	top: -200px;
 }
 
-#stock-exp-descript-ch-tra{
-	font-size: 2em;
-	font-weight: bold;
-	position: relative;
-	left: 560px;
-	top: -260px;
-}
 
 hr{
    position: relative;
@@ -189,3 +172,12 @@ option{
 	left: -53px;
 	visibility: hidden;
 }
+
+#ch-accountnum{
+   position: relative;
+   top: -40px;
+}
+
+
+
+

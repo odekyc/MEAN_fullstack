@@ -26,6 +26,11 @@ body {
 	visibility: visible;
 }
 
+#passwordach-sim{
+     
+}
+
+
 #accounta{
 	top: -25px;
 }
@@ -151,5 +156,13 @@ option{
 
 #passwordaen{
 	position:relative;
+	left: 35px;
 	top: -10px;
+}
+
+#passwordach-sim{
+	position:relative;
+	top: -10px;
+	left: -53px;
+	visibility: hidden;
 }

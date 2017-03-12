@@ -4,10 +4,13 @@ $(document).ready(function() {
              $(".english").css("visibility","hidden");
              $(".ch-simplified").css("visibility","visible");
         }
-        else if ( $(this).val() === 'english' ){
-          alert("hi");
+        else if( $(this).val() === 'en' ){
              $(".english").css("visibility","visible");
              $(".ch-simplified").css("visibility","hidden");
+        }
+        else if( $(this).val() === 'ch-traditional' ){
+             $(".english").css("visibility","hidden");
+             $(".ch-simplified").css("visibility","visible");
         }
     });
 });

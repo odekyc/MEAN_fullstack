@@ -22,8 +22,17 @@ body {
 	visibility: hidden;
 }
 
+.english{
+	visibility: visible;
+}
+
 #accounta{
 	top: -25px;
+}
+
+#inputpassword{
+	position: relative;
+	top: -12px;
 }
 
 .english#accounta{
@@ -39,6 +48,8 @@ body {
 	font-size: 4em;
 	font-weight: bold;
 	color: orange;
+	position: relative;
+	top: 115px;
 }
 
 hr{
@@ -51,7 +62,7 @@ hr{
 	font-size: 2em;
 	font-weight: bold;
 	position: relative;
-	left: 420px;
+	left: 520px;
 	top: -50px;
 }
 
@@ -121,3 +132,7 @@ option{
 	left: 280px;
 }
 
+#passwordaen{
+	position:relative;
+	top: -10px;
+}

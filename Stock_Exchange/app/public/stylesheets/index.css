@@ -16,6 +16,20 @@ body {
 	
 }
 
+.ch-simplified{
+	position: relative;
+	top: -38px;
+	visibility: hidden;
+}
+
+#accounta{
+	top: -15px;
+}
+
+#accountinput{
+	top: -28px;
+}
+
 #stock-exp-title{
 	font-size: 4em;
 	font-weight: bold;
@@ -90,4 +104,15 @@ option{
 	top: 30px;
 }
 
+#en-password-title{
+	position: absolute;
+	top: 145px;
+	left: 240px;
+}
+
+#ch-simplified-password-title{
+	position: absolute;
+	top: 145px;
+	left: 280px;
+}
 

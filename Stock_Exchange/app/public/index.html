@@ -35,15 +35,18 @@
 <div id="log-in-div" ng-app="myApp">
    <form action="index.html">
    <input type="hidden" name="_csrf" value="fjslkldflsjflksdjjflskdj">
-	  <span>Account Number:<span><br>
-	  <input type="text" name="accountnum" value="" minlength="9" maxlength="9" required><br>
-	  <a href="forgetaccountnum.html">Forget Account Number?</a><br>
-	  <span><span id="lock-icon">&#128274;</span>&nbsp;Password:</span><br>
+	  <span class="english">Account Number :</span><br>
+	  <span class="ch-simplified">股票帳號 :</span><br>
+	  <input id="accountinput" type="text" name="accountnum" value="" minlength="9" maxlength="9" required><br>
+	  <a id="accounta" href="forgetaccountnum.html">Forget Account Number?</a><br>
+	  <span class="english" id="en-password-title"><span id="lock-icon">&#128274;</span>&nbsp;Password:</span>
+      <span class="ch-simplified" id="ch-simplified-password-title"><span id="lock-icon">&#128274;</span>&nbsp;密码 :</span><br>
+	  <br>
 	  <input type="password" name="password" value="" minlength="14" maxlength="18" required>
 	  <br>
 	  <a href="forgetpassword.html">Forget Password?</a>
 	  <br>
-	  <span>Language:<span>
+	  <span>Language:</span>
 	  <br>
 	  <select id="lang" name="language">
 		  <option id="en" value="en">English</option>

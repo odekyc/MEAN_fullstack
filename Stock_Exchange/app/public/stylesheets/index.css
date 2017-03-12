@@ -22,6 +22,12 @@ body {
 	visibility: hidden;
 }
 
+.ch-traditional{
+	position: relative;
+	top: -38px;
+	visibility: hidden;
+}
+
 .english{
 	visibility: visible;
 }
@@ -54,7 +60,7 @@ body {
 	font-weight: bold;
 	color: orange;
 	position: relative;
-	top: 20px;
+	top: 165px;
 }
 
 #stock-exp-title-ch-sim{
@@ -62,7 +68,16 @@ body {
 	font-weight: bold;
 	color: orange;
 	position: relative;
-	top: -100px;
+	left: 210px;
+	top: 27px;
+}
+
+#stock-exp-title-ch-tra{
+    font-size: 4em;
+	font-weight: bold;
+	color: orange;
+	position: relative;
+	top: -105px;
 	left: 210px;
 }
 
@@ -72,6 +87,14 @@ body {
 	position: relative;
 	left: 560px;
 	top: -200px;
+}
+
+#stock-exp-descript-ch-tra{
+	font-size: 2em;
+	font-weight: bold;
+	position: relative;
+	left: 560px;
+	top: -260px;
 }
 
 hr{

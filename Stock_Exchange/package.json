@@ -6,8 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "7.0.0"
+  },
+    "keywords": [
+    "example",
+    "heroku"
+  ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "connect-redis": "^3.2.0",
     "express": "^4.15.0",

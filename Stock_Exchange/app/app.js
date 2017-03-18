@@ -15,6 +15,13 @@ var csrf=require('csurf');
 var helmet = require('helmet');
 var client = redis.createClient({host : 'localhost', port : 6379});
 var  validator = require('express-validator');
+var MongoClient = require('mongodb').MongoClient;
+
+MongoClient.connect("mongodb://localhost:27017/logincredentials", function(err, db) {
+  if(!err) {
+    alert("We are connected");
+  }
+});
 
 client.on('ready',function() {
  console.log("Redis is ready");

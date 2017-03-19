@@ -16,15 +16,19 @@ var helmet = require('helmet');
 var client = redis.createClient({host : 'localhost', port : 6379});
 var  validator = require('express-validator');
 var MongoClient = require('mongodb').MongoClient;
-
+var items;
 MongoClient.connect("mongodb://localhost:27017/LoginCredentials", function(err, db) {
-  if(!err) {
-     console.log("We are connected");
-  }
-  else{
+  if(err) {
     console.log(err);
+
   }
+     console.log("We are connected");
+     db.collection('logins', function(err, collection) {
+        items=collection.find();
+        console.log(items);
+     });
 });
+ 
 
 client.on('ready',function() {
  console.log("Redis is ready");
@@ -33,6 +37,7 @@ client.on('ready',function() {
 client.on('error',function() {
  console.log("Error in Redis");
 });
+
 
 
 app.set('port', process.env.PORT || 8080);
@@ -120,3 +125,5 @@ var server = app.listen(app.get('port'), function() {
 });
 
 module.exports = app;
+
+
